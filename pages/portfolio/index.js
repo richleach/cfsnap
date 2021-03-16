@@ -15,7 +15,7 @@ function index() {
                     <div className="container flex">
                         <div className="card">
                             <h4>Gen Center</h4>
-                            <a href="https://www.cfsnap.com/demo/gencenter/index.html" target="_blank"><img src="images/portfolioGenCenter.png" alt="Gen Center Site" /></a>
+                            <a href="https://www.cfsnap.com/demo/gencenter/gencenter.html" target="_blank"><img src="images/portfolioGenCenter.png" alt="Gen Center Site" /></a>
                         </div>
                         <div className="card">
                             <h4>richleach.com</h4>
