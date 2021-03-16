@@ -1,60 +1,39 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Link from "next/link";
+import Head from 'next/head';
 
-function Home() {
-  return (
-    <>          
+function index() {
+    return (
+        <div className="docs-main my-4">
         <Head>
-            <title>CFSNAP Internet Consulting Services</title>
+            <title>CFSNAP Portfolio Page</title>
           </Head>
-      <section className="showcase">
-          <div className="container grid">
-              <div className="showcase-text">
-                  <h1>Business Solutions & Internet Development Consulting</h1>
-                  <p>Writing code and pushing pixels since '95</p>
-              </div>
-
-              <div className="showcase-form card">
-                  <div className="middle-text-puzzle card-puzzle">Solutions for your business.</div>
-                  <Image src="/images/puzzlePieceAndHole.png" width="350" height="258" />
-              </div>
-          </div>
-      </section>
-
-      <section className="languages" style={{marginTop: "25px"}}>
-        <h2 className="md text-center my-2">
-            Favored Technologies
-        </h2>
-        <div className="container flex">
-            <div className="card">
-                <h4>CSS</h4>
-                <Image src="/images/css-logo.png" height="167" width="167" alt="CSS" />
-            </div>
-            <div className="card">
-                <h4>Javascript</h4>
-                <Image src="/images/javascript-logo.png" height="167" width="167"  alt="Javascript" />
-            </div>
-            <div className="card">
-                <h4>React</h4>
-                <Image src="/images/react-logo.png" height="167" width="167"  alt="React" />
-            </div>
-            <div className="card">
-                <h4>Keystone</h4>
-                <Image src="/images/keystone-logo.png" height="167" width="167"  alt="Keystone" />
-            </div>
-            <div className="card">
-                <h4>Graphql</h4>
-                <Image src="/images/graphql-logo.png" height="167" width="167"  alt="Graphql" />
-            </div>
-            <div className="card">
-                <h4>NextJS</h4>
-                <Image src="/images/nextjs-logo.png" height="167" width="167"  alt="NextJS" />
+            <div className="container">
+                <section className="languages">
+                    <h2 className="md text-center my-2">
+                        Some Recent Projects
+                    </h2>
+                    <div className="container flex">
+                        <div className="card">
+                            <h4>Gen Center</h4>
+                            <a href="/demo/gencenter/index.html" target="_blank"><img src="images/portfolioGenCenter.png" alt="Gen Center Site" /></a>
+                        </div>
+                        <div className="card">
+                            <h4>richleach.com</h4>
+                            <a href="http://www.richleach.com" target="_blank"><img src="images/portfolioRichLeach.png" alt="richleach.com" /></a>
+                        </div>
+                        <div className="card">
+                            <h4>Next.js Sample</h4>
+                            <a href="/demo/nest/index.html" target="_blank"><img src="images/portfolioNest.png" alt="next.js Sample" /></a>
+                        </div>
+                        <div className="card">
+                            <h4>CSS Demo</h4>
+                            <a href="/demo/sass-sample/project.html" target="_blank"><img src="images/portfolioHelpNow.png" alt="SCSS Sample" /></a>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
-
-    </>
-  )
+    )
 }
 
-export default Home
+export default index
