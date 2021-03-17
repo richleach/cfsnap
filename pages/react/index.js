@@ -14,7 +14,7 @@ function index() {
                     <ReactBlogPageList />
                 </div>
                 <div className="card">
-                    <h2>React</h2>
+                    <h2>React!</h2>
                     <p>I've worked with Angular for about 2 years, dabbled in Vue.js, but now I call React 'home'. I liked it so much I rewrote my personal site <a href="http://www.richleach.com" target="_blank">richleach.com</a> in React and even rewrote this site using Next.js, finally retiring Coldfusion.</p>
 
                     <h3>I finally guessed correctly....</h3>
