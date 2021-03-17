@@ -23,7 +23,7 @@ function index() {
                         </div>
                         <div className="card">
                             <h4>Next.js Sample</h4>
-                            <a href="http://www.cfsnap.com/demo/nest/index" target="_blank"><img src="images/portfolioNest.png" alt="next.js Sample" /></a>
+                            <a href="http://www.cfsnap.com/demo/Nest/index" target="_blank"><img src="images/portfolioNest.png" alt="next.js Sample" /></a>
                         </div>
                         <div className="card">
                             <h4>CSS Demo</h4>
