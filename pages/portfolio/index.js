@@ -15,7 +15,7 @@ function index() {
                     <div className="container flex">
                         <div className="card">
                             <h4>Gen Center</h4>
-                            <a href="https://www.cfsnap.com/demo/gencenter/index" target="_blank"><img src="images/portfolioGenCenter.png" alt="Gen Center Site" /></a>
+                            <a href="http://www.cfsnap.com/demo/gencenter/index" target="_blank"><img src="images/portfolioGenCenter.png" alt="Gen Center Site" /></a>
                         </div>
                         <div className="card">
                             <h4>richleach.com</h4>
@@ -23,11 +23,11 @@ function index() {
                         </div>
                         <div className="card">
                             <h4>Next.js Sample</h4>
-                            <a href="https://www.cfsnap.com/demo/nest/index" target="_blank"><img src="images/portfolioNest.png" alt="next.js Sample" /></a>
+                            <a href="http://www.cfsnap.com/demo/nest/index" target="_blank"><img src="images/portfolioNest.png" alt="next.js Sample" /></a>
                         </div>
                         <div className="card">
                             <h4>CSS Demo</h4>
-                            <a href="https://www.cfsnap.com/demo/sass-sample/project" target="_blank"><img src="images/portfolioHelpNow.png" alt="SCSS Sample" /></a>
+                            <a href="http://www.cfsnap.com/demo/sass-sample/project" target="_blank"><img src="images/portfolioHelpNow.png" alt="SCSS Sample" /></a>
                         </div>
                     </div>
                 </section>
