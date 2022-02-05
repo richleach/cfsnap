@@ -22,6 +22,10 @@ function index() {
             return false;
         }
 
+        const nameInputRef = useRef()
+        const emailInputRef = useRef()
+        const messageInputRef = useRef()
+
         const enteredName = nameInputRef.current.value
         const enteredEmail = emailInputRef.current.value
         const enteredMessage = messageInputRef.current.value
