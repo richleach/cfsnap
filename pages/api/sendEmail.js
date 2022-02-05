@@ -1,10 +1,11 @@
 import emailjs from 'emailjs-com';
 
-function sendEmail(req, res) {
+export default function sendEmail(req, res) {
+    const body = JSON.parse(req.body)
     if(req.method === 'POST'){
-        const name = req.body.name
-        const email =  req.body.email
-        const message = req.body.message
+        const name = body.name
+        const email =  body.email
+        const message = body.message
 
         const newMessage = {
             name: name,
@@ -26,6 +27,5 @@ function sendEmail(req, res) {
         const responseMessage = 'Thanks for your feedback'
         res.status(200).json({feedback: ''})
     }
-  }
+}
 
-export default sendEmail
