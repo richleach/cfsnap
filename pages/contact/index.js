@@ -54,7 +54,7 @@ function index() {
     return (
       <section className="showcase-form-page">
         <Head>
-            <title>CFSNAP Contact Page</title>
+            <title>CFSNAP! Contact Page</title>
         </Head>
         <div className="container">
             <div className="showcase-form card">
