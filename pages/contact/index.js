@@ -39,6 +39,7 @@ function index() {
             }
         })
         .then((response) => response.json())
+        .then((data) => console.log(data))
         setUserMessage('Thank you, message sent.');
 
         /* emailjs.sendForm('service_hnoicrl', 'template_8mbc16m', e.target, 'user_ACr7oR5XhBgOBbZnuf31n')
