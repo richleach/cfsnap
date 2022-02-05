@@ -9,15 +9,15 @@ function index() {
     function sendEmail(e) {
         e.preventDefault();
        
-        if(e.target.name.value ==''){
+        if(nameInputRef.current.value ==''){
             setUserMessage('Better add a value in the name field')
             return false;
         }
-        if(e.target.email.value == ''){
+        if(emailInputRef.current.value == ''){
             setUserMessage('Better add a value in the email field')
             return false;
         }
-        if(e.target.message.value == ''){
+        if(messageInputRef.current.value == ''){
             setUserMessage('Better add a value in the message field')
             return false;
         }
