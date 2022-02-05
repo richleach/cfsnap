@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import emailjs from 'emailjs-com';
 
 function index() {
     const [userMessage, setUserMessage] = useState('How Can I Help?')
+
     function sendEmail(e) {
         e.preventDefault();
        
@@ -21,14 +22,29 @@ function index() {
             return false;
         }
 
-    
-        emailjs.sendForm('service_hnoicrl', 'template_8mbc16m', e.target, 'user_ACr7oR5XhBgOBbZnuf31n')
+        const enteredName = nameInputRef.current.value
+        const enteredEmail = emailInputRef.current.value
+        const enteredMessage = messageInputRef.current.value
+
+        const reqBody = {name: enteredName, email: enteredEmail, message: enteredMessage}
+
+        fetch('/api/sendEmail', {
+            method: 'POST',
+            body: JSON.stringify(reqBody),
+            headers: {
+                'Content-Type':'application/json'
+            }
+        })
+        .then((response) => response.json())
+        setUserMessage('Thank you, message sent.');
+
+        /* emailjs.sendForm('service_hnoicrl', 'template_8mbc16m', e.target, 'user_ACr7oR5XhBgOBbZnuf31n')
           .then((result) => {
               console.log(result.text);
               setUserMessage('Thank you, message sent.');
           }, (error) => {
               console.log(error.text);
-          });
+          }); */
       }
 
     return (
@@ -39,16 +55,17 @@ function index() {
         <div className="container">
             <div className="showcase-form card">
                 <h2>{userMessage}</h2>
+                
                  <form onSubmit={sendEmail}>
                     <input type="hidden" name="form-name" value="contact" />
                     <div className="form-control">
-                        <input type="text" name="name" placeholder="* Name" required />
+                        <input type="text" name="name" placeholder="* Name" required ref={nameInputRef} />
                     </div>
                     <div className="form-control">
-                        <input type="email" name="email" placeholder="* Email" required />
+                        <input type="email" name="email" placeholder="* Email" required ref={emailInputRef} />
                     </div>
                     <div className="form-control">
-                        <textarea name="message" required placeholder="* Enter your message here.">
+                        <textarea name="message" required placeholder="* Enter your message here." ref={messageInputRef}>
                             
                         </textarea>
                     </div>
