@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Head from 'next/head';
 import { useState, useRef } from 'react';
-import emailjs from 'emailjs-com';
+
 
 function index() {
     const [userMessage, setUserMessage] = useState('How Can I Help?')
+    const nameInputRef = useRef()
+    const emailInputRef = useRef()
+    const messageInputRef = useRef()
 
     function sendEmail(e) {
         e.preventDefault();
@@ -21,10 +24,6 @@ function index() {
             setUserMessage('Better add a value in the message field')
             return false;
         }
-
-        const nameInputRef = useRef()
-        const emailInputRef = useRef()
-        const messageInputRef = useRef()
 
         const enteredName = nameInputRef.current.value
         const enteredEmail = emailInputRef.current.value
