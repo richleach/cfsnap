@@ -1,6 +1,6 @@
 import emailjs from 'emailjs-com';
 
-function sendEmail(e) {
+function sendEmail(req, res) {
     if(req.method === 'POST'){
         const name = req.body.name
         const email =  req.body.email
@@ -20,8 +20,6 @@ function sendEmail(e) {
             console.log(error.text);
         });
 
-    
-
         //return a status, message to the browser
         res.status(201).json({message: 'Success!'})
     } else {
@@ -30,3 +28,4 @@ function sendEmail(e) {
     }
   }
 
+export default sendEmail
