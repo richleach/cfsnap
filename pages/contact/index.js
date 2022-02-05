@@ -36,7 +36,8 @@ function index() {
             body: JSON.stringify(reqBody),
             headers: {
                 'Content-Type':'application/json'
-            }
+            },
+            console.log(body)
         })
         .then((response) => response.json())
         .then((data) => console.log(data))
