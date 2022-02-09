@@ -36,20 +36,11 @@ function index() {
             body: JSON.stringify(reqBody),
             headers: {
                 'Content-Type':'application/json'
-            },
-            console.log(reqBody)
+            }
         })
         .then((response) => response.json())
         .then((data) => console.log(data))
         setUserMessage('Thank you, message sent.');
-
-        /* emailjs.sendForm('service_hnoicrl', 'template_8mbc16m', e.target, 'user_ACr7oR5XhBgOBbZnuf31n')
-          .then((result) => {
-              console.log(result.text);
-              setUserMessage('Thank you, message sent.');
-          }, (error) => {
-              console.log(error.text);
-          }); */
       }
 
     return (
