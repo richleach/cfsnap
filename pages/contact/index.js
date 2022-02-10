@@ -13,15 +13,15 @@ function index() {
     function sendEmail(e) {
         e.preventDefault();
        
-        if(nameInputRef.current.value ==''){
+        if(e.target.name ==''){
             setUserMessage('Better add a value in the name field')
             return false;
         }
-        if(emailInputRef.current.value == ''){
+        if(e.target.email == ''){
             setUserMessage('Better add a value in the email field')
             return false;
         }
-        if(messageInputRef.current.value == ''){
+        if(e.target.message == ''){
             setUserMessage('Better add a value in the message field')
             return false;
         }
@@ -32,9 +32,7 @@ function index() {
 
         const reqBody = {name: enteredName, email: enteredEmail, message: enteredMessage}
 
-
-
-        emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICEID, process.env.NEXT_PUBLIC_TEMPLATEID, e.target, process.env.NEXT_PUBLIC_USERID)
+        emailjs.sendForm('service_ai3shen', 'template_xf5cfim', e.target, 'user_NzVHH8XcaOSaLyWhK0FwL')
         .then(function(response) {
            console.log('SUCCESS!', response.status, response.text);
            setUserMessage('Thank you, message sent.');
