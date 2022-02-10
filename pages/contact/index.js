@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from 'next/head';
+import emailjs from 'emailjs-com';
 import { useState, useRef } from 'react';
 
 
@@ -31,16 +32,15 @@ function index() {
 
         const reqBody = {name: enteredName, email: enteredEmail, message: enteredMessage}
 
-        fetch('/api/sendEmail', {
-            method: 'POST',
-            body: JSON.stringify(reqBody),
-            headers: {
-                'Content-Type':'application/json'
-            }
-        })
-        .then((response) => response.json())
-        .then((data) => console.log(data))
-        setUserMessage('Thank you, message sent.');
+
+
+        emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICEID, process.env.NEXT_PUBLIC_TEMPLATEID, e.target, process.env.NEXT_PUBLIC_USERID)
+        .then(function(response) {
+           console.log('SUCCESS!', response.status, response.text);
+           setUserMessage('Thank you, message sent.');
+        }, function(error) {
+           console.log('FAILED...', error);
+        });
       }
 
     return (
